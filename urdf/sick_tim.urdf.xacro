@@ -2,7 +2,7 @@
 <robot xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
   xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
   xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
-  xmlns:xacro="http://ros.org/wiki/xacro">
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:macro name="sick_tim310" params="name ros_topic">
     <xacro:sick_tim name="${name}" ros_topic="${ros_topic}"
@@ -12,7 +12,7 @@
   </xacro:macro>
 
   <xacro:macro name="sick_tim551" params="name ros_topic">
-    <xacro:sick_tim name="${name}" ros_topic="${ros_topic}" 
+    <xacro:sick_tim name="${name}" ros_topic="${ros_topic}"
       length="0.06" width="0.06" height="0.86" mass="0.250" z_offset="0.06296"
       min_range="0.05" max_range="10.0"
       mesh="package://sick_tim/meshes/sick_tim551.stl" />
@@ -68,7 +68,7 @@
         <always_on>true</always_on>
         <update_rate>${update_rate}</update_rate>
         <pose>0 0 0 0 0 0</pose>
-        <visualize>false</visualize>
+        <visualize>true</visualize>
         <ray>
           <scan>
             <horizontal>

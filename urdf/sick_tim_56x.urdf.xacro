@@ -2,7 +2,7 @@
 <robot xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
   xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
   xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
-  xmlns:xacro="http://ros.org/wiki/xacro">
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:macro name="sick_tim561" params="name ros_topic parent">
     <xacro:sick_tim name="${name}" ros_topic="${ros_topic}"
@@ -24,7 +24,7 @@
         <geometry>
           <mesh filename="${mesh}" />
         </geometry>
-        <material name="blue" >
+        <material name="blue">
           <color rgba="0 0 1 1" />
         </material>
       </visual>
@@ -52,7 +52,7 @@
         <always_on>true</always_on>
         <update_rate>${update_rate}</update_rate>
         <pose>0 0 0 0 0 0</pose>
-        <visualize>false</visualize>
+        <visualize>true</visualize>
         <ray>
           <scan>
             <horizontal>
